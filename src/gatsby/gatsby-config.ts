@@ -1,3 +1,5 @@
+import { startUrl } from "../components/SomeComponentUsingCapacitorFcm"
+
 export default ({ projectRoot }) => ({
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -5,6 +7,7 @@ export default ({ projectRoot }) => ({
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -20,7 +23,7 @@ export default ({ projectRoot }) => ({
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,
-        start_url: `/`,
+        start_url: startUrl,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
